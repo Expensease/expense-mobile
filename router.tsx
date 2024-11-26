@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { ProfileScreen, TestScreen } from './screens/test';
 import AppContainer from './layout/AppContainer';
 import AddExpense from './screens/AddExpense';
+import Expenses from './screens/Expenses';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,11 +15,11 @@ export const MyStack = () => {
         <Stack.Screen
           name="Home"
           layout={AppContainer}
-          component={TestScreen}
+          component={Expenses}
           options={{title: 'Expense Ease 😎'}}
         />
         <Stack.Screen
-          name="Add"
+          name="addPayment"
           layout={AppContainer}
           component={AddExpense}
           options={{title: 'Add Expense'}}

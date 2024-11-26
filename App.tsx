@@ -8,12 +8,23 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { MyStack } from './router';
+import { MD3LightTheme as DefaultTheme, PaperProvider } from 'react-native-paper';
 
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: 'tomato',
+    secondary: 'yellow',
+  },
+};
 
 function App(): React.JSX.Element {
 
   return (
+    <PaperProvider theme={theme}>
       <MyStack />
+    </PaperProvider>
     );
 
     // <SafeAreaView style={backgroundStyle}>
